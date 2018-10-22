@@ -27,9 +27,8 @@ SECRET_KEY = 'gwxih_dg9x+2cma0djj^%xif)9p)2t_up7^=4w_e+l6*8im2rq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
-
-
 
 # Application definition
 
@@ -40,13 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
-    'batch',
-    'hotel',
-    'mainte',
-    'mypage',
-    'reserve',
+    'debug_toolbar',
+    'newbook',
 ]
+
 
 
 MIDDLEWARE = [
@@ -58,10 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-
-
-
 
 ROOT_URLCONF = 'config.urls'
 
@@ -172,3 +166,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root') #test
 
 #MEDIA_ROOT = '/var/www/{}/media'.format(PROJECT_NAME)
 
+
+INTERNAL_IPS = ['127.0.0.1']

@@ -1,0 +1,53 @@
+{% load i18n %}
+<html>
+
+<head></head>
+
+<body>
+
+  ホテル画面
+
+
+  <p>{% trans 'これはテンプレートの翻訳です' %}</p>
+  <p>{{ view_trans }}</p>
+
+
+  <div class="sample">{{ message }}</div>
+  <br>
+  ■単独■<br>
+  {% for hotel in hotels %}
+  <div class="post">
+    <div class="date">
+      <p>ホテル名: {{ hotel.hotel_name }}</p>
+    </div>
+  </div>
+  {% endfor %}
+  <br><br>
+
+  ■単独■<br>
+  {% for plan in plans %}
+  <div class="post">
+    <div class="date">
+      <p>プラン名: {{ plan.plan_name }}</p>
+    </div>
+  </div>
+  {% endfor %}
+  <br><br>
+
+  ■リレーション plan to hotel■<br>
+  {% for planHotel in planHotels %}
+  <div class="post">
+    <div class="date">
+      <p>ホテルID: {{ planHotel.hotel_id }}</p>
+      <p>ホテル名: {{ planHotel.hotel_name }}</p>
+      <p>ホテル名英語: {{ planHotel.hotel_name_en }}</p>
+      <p>プラン名: {{ planHotel.plan_name }}</p>
+
+    </div>
+  </div>
+  {% endfor %}
+  <br><br>
+  
+</body>
+
+</html>

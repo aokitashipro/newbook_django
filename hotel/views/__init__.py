@@ -1,1 +1,0 @@
-from hotel.views.testpage import *
