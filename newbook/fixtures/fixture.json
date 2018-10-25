@@ -1,0 +1,156 @@
+[
+  {
+    "model": "newbook.Hotel",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3200",
+    "fields": {
+      "hotel_id": "N000001",
+      "hotel_name_ja": "狗の郷",
+      "hotel_name_en": "Kunotsato"
+    }
+  },
+  {
+    "model": "newbook.Hotel",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3201",
+    "fields": {
+      "hotel_id": "N000002",
+      "hotel_name_ja": "紫尾庵",
+      "hotel_name_en": "Shibian"
+    }
+  },
+  {
+    "model": "newbook.Plan",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3202",
+    "fields": {
+      "hotel_id": "N000001",
+      "plan_id": "P000001",
+      "plan_name": "素泊まり"
+    }
+  },
+  {
+    "model": "newbook.Plan",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3203",
+    "fields": {
+      "hotel_id": "N000001",
+      "plan_id": "P000002",
+      "plan_name": "朝食"
+    }
+  },
+  {
+    "model": "newbook.Room",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3205",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000001",
+      "room_name": "シングルルーム"
+    }
+  },
+  {
+    "model": "newbook.Room",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3206",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000002",
+      "room_name": "スイートルーム"
+    }
+  },
+  {
+    "model": "newbook.Room",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3207",
+    "fields": {
+      "hotel_id": "N000002",
+      "room_id": "R0001",
+      "room_name": "シングルルーム"
+    }
+  },
+  {
+    "model": "newbook.RoomStock",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3208",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000001",
+      "date": "2018-10-23",
+      "qty": 3,
+      "reserved_out": 1
+    }
+  },
+  {
+    "model": "newbook.RoomStock",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3209",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000001",
+      "date": "2018-10-24",
+      "qty": 3,
+      "reserved_out": 1
+    }
+  },
+  {
+    "model": "newbook.RoomStock",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3210",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000001",
+      "date": "2018-10-25",
+      "qty": 3,
+      "reserved_out": 1
+    }
+  },
+  {
+    "model": "newbook.RoomStock",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3211",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000002",
+      "date": "2018-10-23",
+      "qty": 3,
+      "reserved_out": 1
+    }
+  },
+  {
+    "model": "newbook.RoomStock",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3212",
+    "fields": {
+      "hotel_id": "N000001",
+      "room_id": "R000002",
+      "date": "2018-10-24",
+      "qty": 3,
+      "reserved_out": 1
+    }
+  },
+  {
+    "model": "newbook.DayCharge",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3220",
+    "fields": {
+      "hotel_id": "N000001",
+      "plan_id": "P000001",
+      "date": "2018-10-23",
+      "rank": "A",
+      "person_num": 1,
+      "charge": 8000
+    }
+  },
+  {
+    "model": "newbook.DayCharge",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3221",
+    "fields": {
+      "hotel_id": "N000001",
+      "plan_id": "P000001",
+      "date": "2018-10-23",
+      "rank": "A",
+      "person_num": 2,
+      "charge": 6000
+    }
+  },
+  {
+    "model": "newbook.DayCharge",
+    "pk": "70a19fd5-ace5-4fab-a28e-c4363b3c3222",
+    "fields": {
+      "hotel_id": "N000001",
+      "plan_id": "P000001",
+      "date": "2018-10-23",
+      "rank": "A",
+      "person_num": 3,
+      "charge": 5000
+    }
+  }
+]

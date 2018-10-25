@@ -1,0 +1,1 @@
+from newbook.forms.HotelForms import *

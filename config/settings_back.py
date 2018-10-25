@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'newbook',
+    'webpack_loader',
+    'crispy_forms',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 MIDDLEWARE = [
@@ -166,5 +169,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root') #test
 
 #MEDIA_ROOT = '/var/www/{}/media'.format(PROJECT_NAME)
 
-
+## for Debug tool bar
 INTERNAL_IPS = ['127.0.0.1']

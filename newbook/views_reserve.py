@@ -9,16 +9,15 @@ class TestView(View):
   
   def get(self, request, *args, **kwargs):
 
-    hotels = Hotel.objects.order_by('hotel_id')
-    plans = Plan.objects.order_by('plan_id')
-    planHotels = Plan.objects.select_related('hotel_id')
+    rooms = Room.objects.filter(hotel_id='N000001')
+
+    hotels = Hotel.objects.select_related().all()
 
     context = {
+      'rooms':rooms,
       'hotels':hotels,
-      'plans':plans, 
-      'planHotels':planHotels,
     }
-
+  
     return render(request, 'reserve/testpage.html', context)
 
 testpage = TestView.as_view()

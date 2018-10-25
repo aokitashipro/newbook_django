@@ -1,0 +1,96 @@
+{% extends 'hotel/base.html' %}
+{% load i18n %}
+{% block content %}
+
+■部屋
+{% for room in rooms %}
+<div class="post">
+  <div class="date">
+    <p>部屋名: {{ room.room_name }}</p>
+  </div>
+</div>
+{% endfor %}
+<br><br>
+
+
+<v-app>
+  <v-content>
+    <v-container>Hello world</v-container>
+  </v-content>
+
+  <v-content>
+
+    <p>{% trans 'これはテンプレートの翻訳です' %}</p>
+    <p>{{ view_trans }}</p>
+
+
+    <div class="sample">{{ message }}</div>
+    <br>
+
+    ■部屋
+    {% for room in rooms %}
+    <div class="post">
+      <div class="date">
+        <p>部屋名: {{ room.room_name }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <br><br>
+
+
+    ■同じ条件で表示されるか
+    {% for hotel in hotels %}
+    <div class="post">
+      <div class="date">
+        <p>ホテル名: {{ hotel.hotel_name_ja }}</p>
+        <p>ホテル名英語: {{ hotel.hotel_name_en }}</p>
+
+        {% for roomstock in hotel.roomstock_set.all %}
+
+        <p>日付: {{ roomstock.date }}</p>
+
+        <p>部屋ID: {{ roomstock.room_id }}</p>
+
+        <p>在庫: {{ roomstock.qty }}</p>
+
+        <p>予約数: {{ roomstock.reserved_out }}</p>
+
+        {% for daycharge in hotel.daycharge_set.all %}
+
+        <p>プランID: {{ daycharge.plan_id }}</p>
+
+        <p>料金ランク: {{ daycharge.rank }}</p>
+
+        <p>人数: {{ daycharge.person_num }}</p>
+
+        <p>金額: {{ daycharge.charge }}</p>
+
+        {% endfor %}
+
+        {% endfor %}
+
+      </div>
+    </div>
+    {% endfor %}
+    <br><br>
+
+  </v-content>
+
+  <v-container grid-list-md text-xs-center>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <v-card dark color="primary">
+          <v-card-text class="px-0">12</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex v-for="i in 2" :key="`6${i}`" xs6>
+        <v-card dark color="secondary">
+          <v-card-text class="px-0">6</v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+</v-app>
+
+{% endblock %}

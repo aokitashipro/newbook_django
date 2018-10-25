@@ -19,9 +19,11 @@ from django.urls import include, path
 from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 import debug_toolbar
+from newbook.models import Hotel
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-    path('', include('newbook.urls')),
-    path('__debug__/', include(debug_toolbar.urls)),
+    path('<str:pk>/reserve/', include('newbook.urls_reserve')),
+    path('<str:pk>/hotel/', include('newbook.urls_hotel')),
+    path('__debug__/', include(debug_toolbar.urls))
 )
